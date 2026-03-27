@@ -1,64 +1,5 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>台股兵法智謀全媒體觀測系統</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <style>
-    html, body, #root { margin: 0; min-height: 100%; }
-    body { background: #0c0a09; }
-  </style>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="text/babel">
-
-const { useState, useEffect } = React;
-
-const __iconStyle = (props = {}) => ({
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: (props.size || 20) + 'px',
-  height: (props.size || 20) + 'px',
-  lineHeight: 1,
-  flexShrink: 0
-});
-
-const __makeIcon = (emoji) => (props = {}) => (
-  <span className={props.className || ""} style={__iconStyle(props)} aria-hidden="true">
-    {emoji}
-  </span>
-);
-
-const Shield = __makeIcon("🛡️");
-const Target = __makeIcon("🎯");
-const TrendingUp = __makeIcon("📈");
-const TrendingDown = __makeIcon("📉");
-const BookOpen = __makeIcon("📘");
-const Calculator = __makeIcon("🧮");
-const AlertTriangle = __makeIcon("⚠️");
-const Info = __makeIcon("ℹ️");
-const Calendar = __makeIcon("📅");
-const Award = __makeIcon("🏅");
-const ExternalLink = __makeIcon("🔗");
-const Newspaper = __makeIcon("📰");
-const Landmark = __makeIcon("🏛️");
-const BarChart3 = __makeIcon("📊");
-const Radio = __makeIcon("📡");
-const Zap = __makeIcon("⚡");
-const Activity = __makeIcon("📍");
-const History = __makeIcon("🕘");
-const PieChart = __makeIcon("🥧");
-const Users = __makeIcon("👥");
-const RefreshCw = __makeIcon("🔄");
-const SearchCheck = __makeIcon("✅");
-
-
+import React, { useState, useEffect } from 'react';
+import { Shield, Target, TrendingUp, TrendingDown, BookOpen, Calculator, AlertTriangle, Info, Calendar, Award, ExternalLink, Newspaper, Landmark, BarChart3, Radio, Zap, Activity, History, PieChart, Users, RefreshCw, SearchCheck } from 'lucide-react';
 
 const App = () => {
   const [budget, setBudget] = useState(1000000);
@@ -422,8 +363,4 @@ const App = () => {
   );
 };
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-  </script>
-</body>
-</html>
+export default App;
